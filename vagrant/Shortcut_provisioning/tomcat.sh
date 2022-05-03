@@ -41,3 +41,13 @@ Restart=always
 WantedBy=multi-user.target
 
 EOT
+cd /home/vagrant/
+git clone https://github.com/dogitteamuserzero/devopsclass.git
+cd /home/vagrant/devopsclass
+mvn install
+sudo systemctl stop tomcat
+sudo mkdir -p /usr/local/tomcat8/webapps
+sudo rm -rf /usr/local/tomcat8/webapps/ROOT*
+sudo cp /home/vagrant/devopsclass/target/vprofile-v2.war /usr/local/tomcat8/webapps/ROOT.war
+sudo chown tomcat.tomcat /usr/local/tomcat8/webapps -R
+sudo systemctl start tomcat
