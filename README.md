@@ -1,5 +1,5 @@
 # Лабораторная работа на Windows
-## Редактированно: 
+## Редактировано: 
 
 - `/devopsclass/vagrant/Shortcut_provisioning/Vagrantfile`
 - `/devopsclass/vagrant/Shortcut_provisioning/Vagrantfile/tomcat.sh`
